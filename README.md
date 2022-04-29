@@ -1,2 +1,2 @@
 # floatingblocks.github.io
-My personal hexo blog. See &lt;https://floatingblocks.github.io>
+My personal hexo blog. See https://floatingblocks.github.io
