@@ -104,4 +104,7 @@ theme: minos
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo:
+    # Either syntax is supported
+    github: https://github.com/floatingblocks/floatingblocks.github.io.git,gh-pages
