@@ -3,8 +3,6 @@ title: about
 date: 2022-04-30 11:59:52
 ---
 
-Translating...
-
 I used to persuade others to open a personal blog many times, and now I started a blog myself.
 
 Of course, the blog is a place to put some articles on. I've written several, and most of them haven't been published yet. After this blog is established, I will put many of my stuff on, which contains some technical blog or some essay. But it's hard to tell. You know this is only the beginning, after all.
