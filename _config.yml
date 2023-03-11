@@ -4,18 +4,18 @@
 
 # Site
 title: FloatBlog
-subtitle: ''
-description: ''
-keywords:
-author: FloatingBlocks
+subtitle: 'A blog site of FloatingBlocks'
+description: 'A blog site of FloatingBlocks, Technology, Game, Literature, Politics'
+keywords: FloatingBlocks
+author: FloatingBlocks,Blog,Github Pages,Technology,Game,Literature,Politics
 language:
   - en
   - zh-cn
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://floatingblocks.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
