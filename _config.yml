@@ -5,9 +5,9 @@
 # Site
 title: FloatBlog
 subtitle: 'A blog site of FloatingBlocks'
-description: 'A blog site of FloatingBlocks, Technology, Game, Literature, Politics'
+description: 'A blog site of FloatingBlocks, Technology, Game, Literature, Socialism'
 keywords: FloatingBlocks
-author: FloatingBlocks,Blog,Github Pages,Technology,Game,Literature,Politics
+author: FloatingBlocks,Blog,Github Pages,Technology,Game,Literature,Socialism
 language:
   - en
   - zh-cn
@@ -15,7 +15,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://floatingblocks.github.io
+url: http://fltb.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -107,4 +107,4 @@ deploy:
   type: git
   repo:
     # Either syntax is supported
-    github: https://github.com/floatingblocks/floatingblocks.github.io.git,gh-pages
+    github: https://github.com/fltb/fltb.github.io.git,gh-pages
