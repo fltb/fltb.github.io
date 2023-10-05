@@ -48,7 +48,7 @@ toc: false
 #  shortname:
 comment:
   type: giscus
-  repo: floatingblocks/blog-comments
+  repo: fltb/blog-comments
   repo-id: R_kgDOJIHa8Q
   category: Announcements
   category-id: DIC_kwDOJIHa8c4CUzCw
@@ -69,4 +69,4 @@ plugins:
 navbar_links:
   GitHub:
     icon: fab fa-github
-    url: https://github.com/floatingblocks/
+    url: https://github.com/fltb/
