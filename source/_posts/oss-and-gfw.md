@@ -57,7 +57,7 @@ So programers in China have to do a lot of useless works to solve these troubles
 
 The Great Firewall of China has cut off the flow of new talent to open source communities in China. That's really bad.
 
-Sometimes it can lead to local security vulnerabilities., such as [XcodeGhost](https://www.macrumors.com/2015/09/20/xcodeghost-chinese-malware-faq/).
+Sometimes it can lead to local security vulnerabilities, such as [XcodeGhost](https://www.macrumors.com/2015/09/20/xcodeghost-chinese-malware-faq/).
 
 > A malicious version of Xcode was uploaded to Chinese cloud file sharing service Baidu and downloaded by some iOS developers in China.  
 > Chinese developers then unknowingly compiled iOS apps using the modified Xcode IDE and distributed those infected apps through the App Store.  
@@ -67,40 +67,51 @@ If developers in China can connect to xcode's website directly, then these sort 
 
 ### Development
 
+If the problems mentioned above can be solved through various legal means, then what about communication with the community? Currently, all other ways to communicate with developers are unavailable, except for IRC, self-hosted forums, email, and GitHub Issues. This includes popular platforms such as Telegram, Discord, Reddit, Matrix, Twitter, Facebook, and Instagram. The former platforms are also limited to formal discussions about the software itself.
 
+In other words, we can only get the source code and binary files of the software, and at most suggest something about the software itself. We cannot personally contact the developers, have a more in-depth communication with them, and integrate into the open source culture. This means that we cannot learn how to develop, what to develop, or influence the direction of the project. We can only be passive observers.
 
-如果说前面的问题是可以用各种**合法**方式曲线解决的，那么和社区的交流呢？现在除了 IRC 、自建论坛，邮件和 Github Issues 之外，其余和开发者沟通的方式无论是 Telegram, Discord, Reddit, Matrix 这种， 还是 Twitter Facebook Instgram 这种，都是不能用的，而前者基本局限于正式讨论，关于软件本身的。也就是说我们只能获取软件的源码和二进制文件，顶天了提个软件本身的建议，不能个人地接触开发者，与他们进行更加深度的交流，融入开源的文化，那就不能知道怎么开发，开发什么，也不能说影响项目的方向，只能成为透明人。甚至 Github 都被软墙，这都已经影响到软件的开发本身了。总不会有人不知道镜像站不能 Pull Request 和 Issue 吧。
+Even GitHub has been soft-blocked, which has already affected the development of the software itself. Surely no one doesn't know that mirrors cannot create pull requests or issues.
 
-至于贡献上游的问题，假如坚持上述方式，就根本不需要谈了。不了解文化，不了解开发方向，如何提供可以给上游接受的代码，我也很想知道。
+As for contributing to upstream projects, if we only focus to the legal way, it's pointless to even discuss it. I'm also curious about how to write acceptable code for upstream without getting involved and understanding the development direction.
 
-至于纯国内开源社区开发，要靠什么？ CSDN(**C**opy **S**teal pay-**D**ownload **N**otwork), Gitee 还有 QQ ？谁有信心，就让他去搞吧。即使真做出什么有点意思的项目，推广不到世界去，国内的需求力度不够，撑不起高质量的开源软件。那也就不要谈什么发展了，要么靠补贴养废物，要么就直接死掉吧。
+Some people may have ridiculous ideas about developing with pure domestic open source community. But what do we rely on? CSDN, Gitee, and QQ? Whoever is confident, let them go ahead. Even if you really make an interesting project, if you can't promote it to the world, the demand in China is not enough to support high-quality open source software. Then there is no need to talk about development. Only who can fool the non-technical officers of the relevant department can get support and survives.
 
-如果想要“克服”此类困难，只有去这样了：
+For individual, the only choice is to against the law:
 
-> 第六条　计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。
-> 任何单位和个人不得自行建立或者使用其他信道进行国际联网。
+> Computer information networks that directly connect to the Internet must use international access channels provided by the state public telecommunications network of the Ministry of Posts and Telecommunications.  
+> No units or individuals are allowed to establish or use other channels to connect to the Internet on their own.  
+> —— *Interim Provisions on the Management of International Networking of Computer Information Networks*
 
-一个普通的程序员想在中国搞开源，必须违反中国的法律，这是对中国开源最严厉的判决。然而有些人——不明真相的围观群众，自我欺骗的开发者，仍然认为现状是“合理且必要”的，这也是很荒谬了。
+A programmer had to be illegal before he could develop is the worst condemnation of the Chinese open source community. But some people, like spectators who don't know open source and developers who cheat themselves, still says that The GFW is "reasonable and necessary". That's absurd.
 
 ### User
 
-上面都是在开发者方面的，这里还有普通用户方面的。软件必须有用户，社区的发展必须要有新用户。而我们的 Great Firewall of China 则无情地斩断了这个链条。就拿最基本的软件下载来说吧，我们社区有很多优秀的项目，比如 Ventoy 这个制作可启动 U 盘的开源工具。它在 English 界面**只放了一个 Github Releases**, 而在中文界面放了：
+What we mentioned above is all about the developer, so next we will talk about the users. Softwares must have users, and the community needs users too. But the Great Firewall of China have cut down this link ruthlessly.
+
+There are a bunch of admirable projects in Chinese open source community, for example, the Ventoy Project, which allow users to create bootable USB drive for multiple ISO files. In the English interface, it only provides a single download link to Sourceforge. In the Chinese interface, there are many download links. This is because Chinese users cannot access Sourceforge, and the quality of third-party cloud storage services in China is also very poor. Here is the list：
 
 - <https://github.com/ventoy/Ventoy/releases/>
 - <https://gitee.com/longpanda/Ventoy/releases/>
-- <https://mirrors.nju.edu.cn/github-release/ventoy/Ventoy> （南京大学镜像站）
-- <https://mirrors.sdu.edu.cn/github-release/ventoy_Ventoy>（山东大学镜像站）
-- <https://www.lanzoui.com/b01bd54gb> （蓝奏云）
-- <https://www.123pan.com/s/rjSKVv-8YtN> 提取码: vtoy （123云盘） 
-- <https://pan.baidu.com/s/1UzHMzn6SToxHRYw7HR16_w> 提取码: vtoy （百度网盘） 
+- <https://mirrors.nju.edu.cn/github-release/ventoy/Ventoy> Nanjing University's mirror
+- <https://mirrors.sdu.edu.cn/github-release/ventoy_Ventoy> Shandong University's mirror
+- <https://www.lanzoui.com/b01bd54gb> Lanzouyun cloud storage
+- <https://www.123pan.com/s/rjSKVv-8YtN> 123yun cloud storage, password: vtoy
+- <https://pan.baidu.com/s/1UzHMzn6SToxHRYw7HR16_w> BaiduNetdisk, password: vtoy
 
-这不是拜 Great Firewall of China 所赐，那又是什么呢？如果我们换成其他**只有 Github Releases** 下载的软件呢？后者在社区里面其实是常态。鉴于国内社区的现状，用户接触“开源社区”的时候，肯定是接触国际上的开源社区。我们不能要求**国内的普通用户**掌握访问 Github 的技能。既然普通用户连下载开源软件都做不到，又能如何指望他们了解并且支持开源？Gitee 么？Gitee 是没有未来的，因为它目前没有国际社区的支持，而中国的开源社区又**不足以支持**它（如果有觉得可以的建议自己上手实操一下），要不了几年就会完全变成一个普通的 git 托管网站，失去“社区”性质，进入连镜像站都不如的状态（镜像站还至少有相对的完整性和即时性，Gitee 有么？）。
+Thanks to Great Firewall of China, even downloading the software could be a challenge. If a Chinese user want to try some open source software, then he will find himself stuck because it only have a github releases or source forge download link, which is cut down by the Great Firewall. Or even worse, the whole website are cut  down, like Scratch. You can not demand a ordinary user to have ability to bypass the Great Firewall like developers, right? 
 
-在这种情况下面，普通用户能够接触到的开源软件，除去几个还算平均水平的项目，恐怕只有国内的各个大小厂商的**政策性开源**了。这些软件的质量，如果它们没有快速消失在公众视野中的话，有时间我会收集一些有代表性的项目详细批判。这类项目大抵有以下特点：**非核心技术、弱社区或无社区、面向补贴或媒体开发**。多半发不了几个 Release 就偃旗息鼓了。
+Some phishing website are happy about this. Since the official website are unreachable, they can pretend they are official. Some website provide a bunch of malware alongside that, others even sell some open source software: Python? ￥70! Scratch? ￥80！(around $10). What's more, the malware is more likely to get the higher rank on Chinese search engines than the official website, because they paid protection fees fot the search engine like Baidu, while official website do not.
 
-### 总结
+For ordinary user, they have no way to access the global open source community. In this case, except for few project still at an average level like Deepin Linux, user can only hear some policy-driven watch source software from domestic companies. We call them *watch source* because are not real open source software. Their only purpose is to fool the public's eyes and have more chance to get the official subsidies called Xinchuang. Users and communities are nonsense in their eyes.
 
-既然正统的开源社区和普通用户之间的联系被斩断，既然个人开发者加入社区要克服重重困难，那么就不要谈什么发展产业了，先谈谈如何发展新人，如何生存下去再说吧。也许吃补贴和拿广告费的企业会喜欢现状的，因为社区弱势的情况下，他们可以凭借这样的信息差，在开源软件基础上进行一点点二次开发，然后在“自研”的大帽子下面心安理得地挣钱。不论 Great Firewall of China 背后的势力有什么目的，他们总是促成了这样的事实：贱卖国内开源软件的未来，并把它装进某些人的腰包里面。
+As a result, people in China know less about the open source. That's really bad for us.
+
+### Summary
+
+As the link between the open source community and the ordinary user are cut off and the individual developers have to overcome many difficulties to get involved in the community, it is meaningless to talk about the future development of the open source community in China. We need to face the problem of how to develop new people and survive at first.
+
+Maybe companies that rely on subsidies and advertising are happy about this. In the case fo a weak community, they can take advantage of the information gap to make a bit secondary development based on the open source project and make money of them under the guise of "self-developed". No matter what the purpose of the force behind the Great Firewall are, they have lead to the fact that they sells the future of the domestic open source community and put them into someone's pockets.
 
 ## 现有政策的真实意图
 
