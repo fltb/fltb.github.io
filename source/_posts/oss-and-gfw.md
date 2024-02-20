@@ -22,7 +22,7 @@ The main purpose of the article is to attract valuable insights. If there are an
 ## How Great Firewall of China harms the Open Source Community
 
 
-As of now, the computer penetration rate in China is relatively low. This is a fundamental limitation, as it is impossible to develop software on a mobile phone. Additionally, the general public's computer literacy is generally insufficient，as evidenced by the discussion of "Internet addiction" and "Game addiction prevention". These factor need to be further discussed，but they are too broad in scope. So let's set them aside now，and focus on how the existing policies are directly hindering the development of the open source community in China. These obstacles, unlike the previous ones, are purely man-made issues, which can be removed by in a day. The Great Firewall of China, which is standard for the Great Firewall, uses a group of operator level methods like by hijacking connections and DNS pollution to prevent Chinese people from accessing some websites abroad.
+As of now, the computer penetration rate in China is relatively low. This is a fundamental limitation, as it is impossible to develop software on a mobile phone. Additionally, the general public's computer literacy is generally insufficient，as evidenced by the discussion of "Internet addiction" and "Game addiction prevention". These factor need to be further discussed，but they are too broad in scope. So let's set them aside now，and focus on how the existing policies are directly hindering the development of the open source community in China. These obstacles, unlike the previous ones, are purely man-made issues, which can be removed by in a day. The GFW, which stands for the Great Firewall, uses a group of operator level methods like by hijacking connections and DNS pollution to prevent Chinese people from accessing some websites abroad.
 
 Next, I will refer to the paradigm given in [Participating in Open Source Communities *How to be a good corporate citizen when participating in an open source project*](https://www.linuxfoundation.org/resources/open-source-guides/participating-in-open-source-communities) to point out how Great Firewall of China is preventing people joining the Open Source Community. 
 
@@ -47,7 +47,7 @@ For individual developers, Great Firewall of China have these charges:
 
 - Increase the difficulty of getting started with the open source project.
 - Blocks the communication between domestic open source communities and international open source communities (in terms of participating in communities and contributing upstream).
-- Blocks the communication between open source communities and ordinary users.
+- Blocks the communication between open source communities and common users.
 
 ### Connection issues
 
@@ -99,21 +99,23 @@ There are a bunch of admirable projects in Chinese open source community, for ex
 - <https://www.123pan.com/s/rjSKVv-8YtN> 123yun cloud storage, password: vtoy
 - <https://pan.baidu.com/s/1UzHMzn6SToxHRYw7HR16_w> BaiduNetdisk, password: vtoy
 
-Thanks to Great Firewall of China, even downloading the software could be a challenge. If a Chinese user want to try some open source software, then he will find himself stuck because it only have a github releases or source forge download link, which is cut down by the Great Firewall. Or even worse, the whole website are cut  down, like Scratch. You can not demand a ordinary user to have ability to bypass the Great Firewall like developers, right? 
+Thanks to Great Firewall of China, even downloading the software could be a challenge. If a Chinese user want to try some open source software, then he will find himself stuck because it only have a github releases or source forge download link, which is cut down by the Great Firewall. Or even worse, the whole website are cut  down, like Scratch. You can not demand a common user to have ability to bypass the Great Firewall like developers, right? 
 
 Some phishing website are happy about this. Since the official website are unreachable, they can pretend they are official. Some website provide a bunch of malware alongside that, others even sell some open source software: Python? ￥70! Scratch? ￥80！(around $10). What's more, the malware is more likely to get the higher rank on Chinese search engines than the official website, because they paid protection fees fot the search engine like Baidu, while official website do not.
 
-For ordinary user, they have no way to access the global open source community. In this case, except for few project still at an average level like Deepin Linux, user can only hear some policy-driven watch source software from domestic companies. We call them *watch source* because are not real open source software. Their only purpose is to fool the public's eyes and have more chance to get the official subsidies called Xinchuang. Users and communities are nonsense in their eyes.
+For common user, they have no way to access the global open source community. In this case, except for few project still at an average level like Deepin Linux, user can only hear some policy-driven watch source software from domestic companies. We call them *watch source* because are not real open source software. Their only purpose is to fool the public's eyes and have more chance to get the official subsidies called Xinchuang. Users and communities are nonsense in their eyes.
 
 As a result, people in China know less about the open source. That's really bad for us.
 
 ### Summary
 
-As the link between the open source community and the ordinary user are cut off and the individual developers have to overcome many difficulties to get involved in the community, it is meaningless to talk about the future development of the open source community in China. We need to face the problem of how to develop new people and survive at first.
+As the link between the open source community and the common user are cut off and the individual developers have to overcome many difficulties to get involved in the community, it is meaningless to talk about the future development of the open source community in China. We need to face the problem of how to develop new people and survive at first.
 
 Maybe companies that rely on subsidies and advertising are happy about this. In the case fo a weak community, they can take advantage of the information gap to make a bit secondary development based on the open source project and make money of them under the guise of "self-developed". No matter what the purpose of the force behind the Great Firewall are, they have lead to the fact that they sells the future of the domestic open source community and put them into someone's pockets.
 
-## 现有政策的真实意图
+**The rest part of this article are haven't translated for now, please wait for further translation.**
+
+<!-- ## 现有政策的真实意图
 
 ### 开源到底是什么？
 
@@ -252,3 +254,4 @@ Maybe companies that rely on subsidies and advertising are happy about this. In 
 最后就用一句耳熟能详的话结尾吧：
 
 > 全世界无产者，联合起来！
+-->
