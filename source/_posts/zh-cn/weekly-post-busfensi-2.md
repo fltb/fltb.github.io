@@ -62,4 +62,4 @@ tags:
 
 关于编辑功能就不演示了，反正只有拖动点和拖动地图以及调整缩放比例。
 
-![img](/zh-cn/weekly-post-busfensi-1/2024-08-05/image.png)
+![img](/zh-cn/weekly-post-busfensi-2/2024-08-05/image.png)
