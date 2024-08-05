@@ -131,6 +131,65 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/" itemprop="url">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2024-08-05T07:39:19.000Z" itemprop="datePublished">8月 5 2024</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            9 分钟 读完 (约 1339 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>距离上一个周报已经过去两个多星期了，我也应该要同步当前的进度了。</p>
+<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>目前项目的核心模块已经基本固定下来，可以进入后半阶段的开发，接下来的工作基本上是在现有框架内添加新的功能。</p>
+<p>首先是调通了渲染部分，不过还是有些细节缺少打磨，比如样式以及控制渲染的元素，这些会和之后的功能同步进行，确保样式和编辑逻辑贴和。</p>
+<p>其次我写了个 OSM API 模块，用 Promise 打包了一些 OSM 的接口，将返回的 XML 解析成 JS Object , 方便在程序中调用。</p>
+<p>接下来是编辑模块。主要包括操作逻辑部分和全局数据管理部分</p>
+<p>对于地图编辑中的操作逻辑，引入了状态机，在代码中称为 state machine，管理当前的编辑器状态，通过监听鼠标和键盘事件，再根据状态图中提供的函数和状态关系，进行状态转移和相关数据维护。根据当前状态判断事件应当触发的行为和新状态。state machine 提供了一些 hook, 用于在其他地方挂载，追踪事件，比如 pixi 中的鼠标事件。编辑操作就在状态转移的时候进行。</p>
+<p>一般来说，在状态机本身转移的过程中会产生一系列对全局数据的变更。为了维护这些变更，提供了一个双向链表来进行管理这些变更，在代码中称为 action list。这个链表对外提供 undo, redo 和 do 接口。其中 do 接口接受一个 action 并且执行它，再将其加入链表尾部。为了避免多个重复 action，还会对有些 action 进行 merge 操作。</p>
+<p>一个 action 提供 do, undo, redo 接口，有些还会提供 merge。action 应当在被执行，撤销，重做时对全局数据进行维护，同时还要维护其他相关变更，比如被影响的元素的 UI,各个图层的数据等等。这样确保所有的变更集中到一起，尽可能减少引入撤销重做时对于相关变更维护的心智富而俺。</p>
+<p>全局数据是一个对象，它的引用存在每个 action 中，由 action list 保证每个 action 在撤销和重做时的顺序是正确的，比如确保撤销 action 时一定是该 action 被执行之后的状态，即后续 action 都已经被撤销。</p>
+<p>由于目前实际的编辑操作尚未完成，暂时不考虑 undo 和 redo 操作，因为他们会依赖未完成的部分代码。</p>
+<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>目前项目已经开发了一个月了，考虑到九月底就要结项，时间还是比较紧的。所以我会尽量优先完成核心功能，将一些非核心的外围功能排在后面完成，确保顺利结项（OSPP 的一万二不能丢啊，好多钱呢，剩下功能大不了国庆继续开发）。</p>
+<p>以下是大致需要的功能：</p>
+<h3 id="UI-方面"><a href="#UI-方面" class="headerlink" title="UI 方面"></a>UI 方面</h3><p>大纲(Outline)视图：可以显示当前所有元素，可以在这里选择元素，管理元素的基础状态</p>
+<p>属性(Property)视图：管理各种属性，包括全局设置属性，当前选中元素元信息等。</p>
+<p>还有一些独立的小组件，比如新建结点，连接线段等等</p>
+<h3 id="功能方面"><a href="#功能方面" class="headerlink" title="功能方面"></a>功能方面</h3><p>作为公共交通编辑器，就应该有公共交通编辑功能。在 OSM XML 中，公共交通关系是一个 relation 元素，这个 relation 拥有一个 route, 以及一系列 tag 表示该元素的具体信息。</p>
+<p>对于元信息的编辑，可以使用前面提到的属性视图来直接编辑。</p>
+<p>对于具体的点的位置，使用地图模块完成编辑。可以考虑添加一定的 style 来实现高亮方便明确当前编辑的路线。</p>
+<p>对于路线对于点和路径的包含关系，需要将地图的选择功能和属性视图结合。</p>
+<p>可能还需要一定的线路新建功能，包括新建点，新建线路，对线路属性再进行编辑。</p>
+<p>完成根据站点关系的线路计算功能，可以考虑调用现有 API 来实现</p>
+<h2 id="演示效果"><a href="#演示效果" class="headerlink" title="演示效果"></a>演示效果</h2><p>原谅我没有时间来打磨，现在他们全部共享一个 style 确实很难看。</p>
+<p>不过再加几行代码就可以吧建筑物的渲染取消掉，那样就会好很多。之后会慢慢调整style 的，也许从 iD 编辑器那边把颜色吸过来？😂</p>
+<p>关于编辑功能就不演示了，反正只有拖动点和拖动地图以及调整缩放比例。</p>
+<p><img src="/zh-cn/weekly-post-busfensi-1/2024-08-05/image.png" alt="img"></p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/" itemprop="url">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1</a>
         
     </h1>
