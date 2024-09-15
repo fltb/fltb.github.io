@@ -131,6 +131,98 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/zh-cn/weekly-post-busfensi-4/2024-09-15/" itemprop="url">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#4</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2024-09-15T12:22:38.000Z" itemprop="datePublished">9月 15 2024</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 分钟 读完 (约 421 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>这次的周报又多拖了两个星期。其实按照实际进度来说项目已经接近完成了。不过我会吧进度同步到这份周报该发布的时间。</p>
+<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><h3 id="Filter-and-Collection"><a href="#Filter-and-Collection" class="headerlink" title="Filter and Collection"></a>Filter and Collection</h3><p>完成 filter 部分，将原始请求的 osm bbox 数据进行筛选，分为 public transport 和 highway 等 collection。</p>
+<p>考虑到编辑器主要服务于公共交通，所以不需要过多关注建筑物等信息的编辑。主要关注 highway 和 public transport.在参考了 OSM wiki 之后编写了 filter, 利用 tag 信息来过滤数据，进行分类。</p>
+<p>对于筛选后需要展示和编辑的数据，建立了 feature tree 的树形结构，维护 OSM 数据的树形关系，便于展示和编辑。</p>
+<h3 id="Sidebar"><a href="#Sidebar" class="headerlink" title="Sidebar"></a>Sidebar</h3><p>在地图的右侧新增了 sidebar, 包括 outline view 和 property editor。</p>
+<p>在 outline view 中，使用树形 list 展示数据，并且允许选择数据。</p>
+<p>在 property editor 中 展示现有 OSM feature 的 property, 并且允许编辑其中的 tag. 成员的顺序更改引入的 dnd-kit 来拖拽变化顺序。同时允许将一些选中的 feature 插入其中作为成员。</p>
+<h3 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h3><p>relation 的 member 也可以是 relation, 之前的 type 定义中忘记了。</p>
+<p>移除了一些 console.log 调试语句。</p>
+<p>其他一些小的 bug 修正。</p>
+<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>下阶段的更新将会进行一些收尾性质的功能，主要包括未完成的功能，需要优化的逻辑，UI 上的问题等等。</p>
+<p>具体的 TODO 已经更新在项目仓库。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/zh-cn/weekly-post-busfensi-3/2024-09-02/" itemprop="url">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2024-09-02T08:37:32.000Z" itemprop="datePublished">9月 2 2024</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            8 分钟 读完 (约 1179 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>很遗憾这个周报欠了两个星期，所以这次会连着发两份周报（下一份也在写了）。</p>
+<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>截止本周报应该发布的时间，我已经完成了项目的 React 重构，并且初步确定了 UI 编辑模块的组成。</p>
+<h3 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h3><p>在项目开始一个月，已经写了一半的情况下面重构，的确不是一个很容易做出的确定，但是原先的技术选型确实不能支持这个项目的继续开发了——倒不说说技术上不可行，但是需要更多的时间，而且复杂度会超出掌控。</p>
+<p>原先的技术选型受到了 Rapid 项目的影响，这个项目采用了原生 ESM 来进行开发，而不是使用流行的前端框架。因为我这个项目也使用 PIXI.js 来进行地图的渲染，很多实现和设计都参考了 Rapid ，所以一开始也很自然的学起了它的技术选型。</p>
+<p>但是在准备 UI 模块的时候，面对需要拓展的状态管理相关的逻辑，这个项目的复杂度开始了指数增长，我需要保证 PIXI.js 的组件和 DOM 的 UI 都去跟踪同一份数据的变更来进行渲染和重绘，这样的逻辑会很复杂，需要我对状态管理的逻辑进行拓展，因为还需要 undo 和 redo 功能。原先的 Action List 的模型还是不足以撑起这么复杂的需求，如果要拓展到能用的程度就会需要很大的工作量——Rapid 项目，或者 iD 项目，在实现编辑系统和相关部分的时候应该写了上千行代码，而且只是一个框架。而如果我打算这么写的话，后续的开发进度就很难保证。</p>
+<p>这时候我开始向导师求助，导师代询问了几位活跃在一线的前端开发者，并且得到了一些状态管理方面的建议。另外，不止一人对不用框架硬写表示怀疑，建议引入现代前端框架，比如 React 或者 Vue，“我觉得想清楚是自己想要造轮子，还是想用轮子实现一个应用，最好只二选一”。</p>
+<p>在综合了各方建议之后，我决定引入 React 框架，使用 zustand 作为全局状态管理，同时 PIXI.js 有一个官方的 React 绑定，这也方便了我的迁移工作。</p>
+<p>迁移的过程还算顺利，毕竟我其实也更熟悉用框架来开发，当初选取原生 JS 纯粹是抱着试试看的心态。显然这次尝试不是很成功。</p>
+<p>重构之后，原来的 Action 抽象被彻底废弃，转入用 zustand 实现的 model 模块，原先所需的功能变成了 zustand 的 store 中的函数。这些以 Action 为名字结尾的函数应该是这个模块最后的痕迹了。 PIXI 模块使用了 React 绑定，现在看上去就像普通的 React JSX 了。原先的 stateMachine 被保留了下来，除了已经废弃的 ActionList 的接口和被大改的 PIXI 模块的接口部分做了一点改动。其他的代码没有太多大改，只是被我接着重构的机会迁移到了 Typescript, 相比 JSDoc 纯粹在注释上的类型标注自然是更加严格而且便捷了。</p>
+<h3 id="UI-部分"><a href="#UI-部分" class="headerlink" title="UI 部分"></a>UI 部分</h3><p>在重构之后，我开始了 UI 模块的开发工作。对于原先计划的 Outline 和 Property 页面大致写下了一些简单的静态组件来进行占位。目前测试良好，能够获取全局状态并且展示。这部分的开发可能会更加偏向传统前端项目。所以应该会比较平稳。</p>
+<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>这次的更新计划，由于没有太多功能上的推进，会继续在上一份双周报中提到的目标的基础上继续推进。</p>
+<p>需要补充的是接下来会在大纲视图中对当前的元素分类，并且会写出 filter 来筛选数据，因为这个编辑器中可能目前只需要展示 <code>highway=*</code> 和 public transport v2 的数据，所以接下来的编辑界面应该会清爽很多。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/" itemprop="url">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a>
         
     </h1>
@@ -252,7 +344,7 @@
         <span class="column is-narrow">
             
             
-            4 分钟 读完 (约 642 字)
+            4 分钟 读完 (约 651 字)
         </span>
         
     </div>
@@ -268,6 +360,7 @@
 <p>通过引入状态管理机制，支持操作历史可持久化，可以满足撤回重做等基本操作需求。同时可以引入版本控制的有关思想，确保历史记录的高效性和稳定性。</p>
 <h3 id="OSM-API-模块"><a href="#OSM-API-模块" class="headerlink" title="OSM API 模块"></a>OSM API 模块</h3><p>提供与 OSM API v0.6 的交互的抽象，包括登录鉴权，数据请求，编辑数据后的数据上传，并且遵循 OSM 接口的规范。</p>
 <h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>项目进度会在后续文章更新</p>
+<h2 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h2><p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><br>CC0<br></a>.</p>
 </body></html>
     
     </div>

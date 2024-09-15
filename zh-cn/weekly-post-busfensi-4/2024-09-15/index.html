@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-<title>归档 - FloatBlog</title>
+<title>基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#4 - FloatBlog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/archives/index.html" rel="alternate" hreflang="en" />
+<link href="/weekly-post-busfensi-4/2024-09-15/" rel="alternate" hreflang="en" />
     
 
 
@@ -21,13 +21,15 @@
 
 
 
-    <meta name="description" content="A blog site of fltb, Technology, Game, Literature, Socialism">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FloatBlog">
-<meta property="og:url" content="http://fltb.github.io/zh-cn/archives/index.html">
+    <meta name="description" content="这次的周报又多拖了两个星期。其实按照实际进度来说项目已经接近完成了。不过我会吧进度同步到这份周报该发布的时间。 项目进度Filter and Collection完成 filter 部分，将原始请求的 osm bbox 数据进行筛选，分为 public transport 和 highway 等 collection。 考虑到编辑器主要服务于公共交通，所以不需要过多关注建筑物等信息的编辑。主要关注">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#4">
+<meta property="og:url" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-4/2024-09-15/index.html">
 <meta property="og:site_name" content="FloatBlog">
-<meta property="og:description" content="A blog site of fltb, Technology, Game, Literature, Socialism">
+<meta property="og:description" content="这次的周报又多拖了两个星期。其实按照实际进度来说项目已经接近完成了。不过我会吧进度同步到这份周报该发布的时间。 项目进度Filter and Collection完成 filter 部分，将原始请求的 osm bbox 数据进行筛选，分为 public transport 和 highway 等 collection。 考虑到编辑器主要服务于公共交通，所以不需要过多关注建筑物等信息的编辑。主要关注">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-15T12:22:38.000Z">
+<meta property="article:modified_time" content="2024-09-15T13:32:26.640Z">
 <meta property="article:author" content="fltb,Blog,Github Pages,Technology,Game,Literature,Socialism">
 <meta property="article:tag" content="fltb">
 <meta name="twitter:card" content="summary">
@@ -92,7 +94,7 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item is-active"
+            <a class="navbar-item "
                href="/zh-cn/archives">归档</a>
             
             <a class="navbar-item "
@@ -127,72 +129,83 @@
 
         <section class="section">
     <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#4
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2024-09-15T12:22:38.000Z" itemprop="datePublished">9月 15 2024</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 分钟 读完 (约 421 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>这次的周报又多拖了两个星期。其实按照实际进度来说项目已经接近完成了。不过我会吧进度同步到这份周报该发布的时间。</p>
+<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><h3 id="Filter-and-Collection"><a href="#Filter-and-Collection" class="headerlink" title="Filter and Collection"></a>Filter and Collection</h3><p>完成 filter 部分，将原始请求的 osm bbox 数据进行筛选，分为 public transport 和 highway 等 collection。</p>
+<p>考虑到编辑器主要服务于公共交通，所以不需要过多关注建筑物等信息的编辑。主要关注 highway 和 public transport.在参考了 OSM wiki 之后编写了 filter, 利用 tag 信息来过滤数据，进行分类。</p>
+<p>对于筛选后需要展示和编辑的数据，建立了 feature tree 的树形结构，维护 OSM 数据的树形关系，便于展示和编辑。</p>
+<h3 id="Sidebar"><a href="#Sidebar" class="headerlink" title="Sidebar"></a>Sidebar</h3><p>在地图的右侧新增了 sidebar, 包括 outline view 和 property editor。</p>
+<p>在 outline view 中，使用树形 list 展示数据，并且允许选择数据。</p>
+<p>在 property editor 中 展示现有 OSM feature 的 property, 并且允许编辑其中的 tag. 成员的顺序更改引入的 dnd-kit 来拖拽变化顺序。同时允许将一些选中的 feature 插入其中作为成员。</p>
+<h3 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h3><p>relation 的 member 也可以是 relation, 之前的 type 定义中忘记了。</p>
+<p>移除了一些 console.log 调试语句。</p>
+<p>其他一些小的 bug 修正。</p>
+<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>下阶段的更新将会进行一些收尾性质的功能，主要包括未完成的功能，需要优化的逻辑，UI 上的问题等等。</p>
+<p>具体的 TODO 已经更新在项目仓库。</p>
+</body></html>
+    
+    </div>
     
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2024">2024</h4>
-            <div class="articles">
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-09-15T12:22:38.000Z" itemprop="datePublished">
-                        9月 15</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-4/2024-09-15/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#4</a></h6>
-                </div>
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-09-02T08:37:32.000Z" itemprop="datePublished">
-                        9月 2</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-3/2024-09-02/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3</a></h6>
-                </div>
+            <a href="/zh-cn/weekly-post-busfensi-3/2024-09-02/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3</a>
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-08-05T07:39:19.000Z" itemprop="datePublished">
-                        8月 5</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a></h6>
-                </div>
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-07-18T01:25:21.000Z" itemprop="datePublished">
-                        7月 18</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1</a></h6>
-                </div>
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-07-16T13:04:54.000Z" itemprop="datePublished">
-                        7月 16</time>
-                    <h6 class="title is-6"><a href="/zh-cn/opening-of-busfensi-osm/2024-07-16/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting</a></h6>
-                </div>
-            
-            </div>
-        </div>
+        </span>
+    </div>
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2023">2023</h4>
-            <div class="articles">
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2023-01-25T10:54:08.000Z" itemprop="datePublished">
-                        1月 25</time>
-                    <h6 class="title is-6"><a href="/zh-cn/my-thought-of-witcher-3/2023-01-25/">我游玩《巫师 3》后的想法</a></h6>
-                </div>
-            
-            </div>
-        </div>
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">评论</h3>
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2022">2022</h4>
-            <div class="articles">
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2022-01-25T10:54:00.000Z" itemprop="datePublished">
-                        1月 25</time>
-                    <h6 class="title is-6"><a href="/zh-cn/hello-world/2022-01-25/">Hello World</a></h6>
-                </div>
-            
-            </div>
-        </div>
-    
-    
+        <script src="https://giscus.app/client.js"
+        data-repo="fltb/blog-comments"
+        data-repo-id="R_kgDOJIHa8Q"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOJIHa8c4CUzCw"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+        
+</div>
+
     </div>
 </section>
             <footer class="footer">
@@ -247,11 +260,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/archives/index.html" class="dropdown-item">
+                <a href="/weekly-post-busfensi-4/2024-09-15/" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/zh-cn/archives/index.html" class="dropdown-item">
+                <a href="/zh-cn/weekly-post-busfensi-4/2024-09-15/" class="dropdown-item">
                     简体中文
                 </a>
             

@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-<title>归档 - FloatBlog</title>
+<title>基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3 - FloatBlog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/archives/index.html" rel="alternate" hreflang="en" />
+<link href="/weekly-post-busfensi-3/2024-09-02/" rel="alternate" hreflang="en" />
     
 
 
@@ -21,13 +21,15 @@
 
 
 
-    <meta name="description" content="A blog site of fltb, Technology, Game, Literature, Socialism">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FloatBlog">
-<meta property="og:url" content="http://fltb.github.io/zh-cn/archives/index.html">
+    <meta name="description" content="很遗憾这个周报欠了两个星期，所以这次会连着发两份周报（下一份也在写了）。 项目进度截止本周报应该发布的时间，我已经完成了项目的 React 重构，并且初步确定了 UI 编辑模块的组成。 重构在项目开始一个月，已经写了一半的情况下面重构，的确不是一个很容易做出的确定，但是原先的技术选型确实不能支持这个项目的继续开发了——倒不说说技术上不可行，但是需要更多的时间，而且复杂度会超出掌控。 原先的技术选型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3">
+<meta property="og:url" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-3/2024-09-02/index.html">
 <meta property="og:site_name" content="FloatBlog">
-<meta property="og:description" content="A blog site of fltb, Technology, Game, Literature, Socialism">
+<meta property="og:description" content="很遗憾这个周报欠了两个星期，所以这次会连着发两份周报（下一份也在写了）。 项目进度截止本周报应该发布的时间，我已经完成了项目的 React 重构，并且初步确定了 UI 编辑模块的组成。 重构在项目开始一个月，已经写了一半的情况下面重构，的确不是一个很容易做出的确定，但是原先的技术选型确实不能支持这个项目的继续开发了——倒不说说技术上不可行，但是需要更多的时间，而且复杂度会超出掌控。 原先的技术选型">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-02T08:37:32.000Z">
+<meta property="article:modified_time" content="2024-09-15T11:15:34.004Z">
 <meta property="article:author" content="fltb,Blog,Github Pages,Technology,Game,Literature,Socialism">
 <meta property="article:tag" content="fltb">
 <meta name="twitter:card" content="summary">
@@ -92,7 +94,7 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item is-active"
+            <a class="navbar-item "
                href="/zh-cn/archives">归档</a>
             
             <a class="navbar-item "
@@ -127,72 +129,85 @@
 
         <section class="section">
     <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2024-09-02T08:37:32.000Z" itemprop="datePublished">9月 2 2024</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            8 分钟 读完 (约 1179 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>很遗憾这个周报欠了两个星期，所以这次会连着发两份周报（下一份也在写了）。</p>
+<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>截止本周报应该发布的时间，我已经完成了项目的 React 重构，并且初步确定了 UI 编辑模块的组成。</p>
+<h3 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h3><p>在项目开始一个月，已经写了一半的情况下面重构，的确不是一个很容易做出的确定，但是原先的技术选型确实不能支持这个项目的继续开发了——倒不说说技术上不可行，但是需要更多的时间，而且复杂度会超出掌控。</p>
+<p>原先的技术选型受到了 Rapid 项目的影响，这个项目采用了原生 ESM 来进行开发，而不是使用流行的前端框架。因为我这个项目也使用 PIXI.js 来进行地图的渲染，很多实现和设计都参考了 Rapid ，所以一开始也很自然的学起了它的技术选型。</p>
+<p>但是在准备 UI 模块的时候，面对需要拓展的状态管理相关的逻辑，这个项目的复杂度开始了指数增长，我需要保证 PIXI.js 的组件和 DOM 的 UI 都去跟踪同一份数据的变更来进行渲染和重绘，这样的逻辑会很复杂，需要我对状态管理的逻辑进行拓展，因为还需要 undo 和 redo 功能。原先的 Action List 的模型还是不足以撑起这么复杂的需求，如果要拓展到能用的程度就会需要很大的工作量——Rapid 项目，或者 iD 项目，在实现编辑系统和相关部分的时候应该写了上千行代码，而且只是一个框架。而如果我打算这么写的话，后续的开发进度就很难保证。</p>
+<p>这时候我开始向导师求助，导师代询问了几位活跃在一线的前端开发者，并且得到了一些状态管理方面的建议。另外，不止一人对不用框架硬写表示怀疑，建议引入现代前端框架，比如 React 或者 Vue，“我觉得想清楚是自己想要造轮子，还是想用轮子实现一个应用，最好只二选一”。</p>
+<p>在综合了各方建议之后，我决定引入 React 框架，使用 zustand 作为全局状态管理，同时 PIXI.js 有一个官方的 React 绑定，这也方便了我的迁移工作。</p>
+<p>迁移的过程还算顺利，毕竟我其实也更熟悉用框架来开发，当初选取原生 JS 纯粹是抱着试试看的心态。显然这次尝试不是很成功。</p>
+<p>重构之后，原来的 Action 抽象被彻底废弃，转入用 zustand 实现的 model 模块，原先所需的功能变成了 zustand 的 store 中的函数。这些以 Action 为名字结尾的函数应该是这个模块最后的痕迹了。 PIXI 模块使用了 React 绑定，现在看上去就像普通的 React JSX 了。原先的 stateMachine 被保留了下来，除了已经废弃的 ActionList 的接口和被大改的 PIXI 模块的接口部分做了一点改动。其他的代码没有太多大改，只是被我接着重构的机会迁移到了 Typescript, 相比 JSDoc 纯粹在注释上的类型标注自然是更加严格而且便捷了。</p>
+<h3 id="UI-部分"><a href="#UI-部分" class="headerlink" title="UI 部分"></a>UI 部分</h3><p>在重构之后，我开始了 UI 模块的开发工作。对于原先计划的 Outline 和 Property 页面大致写下了一些简单的静态组件来进行占位。目前测试良好，能够获取全局状态并且展示。这部分的开发可能会更加偏向传统前端项目。所以应该会比较平稳。</p>
+<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>这次的更新计划，由于没有太多功能上的推进，会继续在上一份双周报中提到的目标的基础上继续推进。</p>
+<p>需要补充的是接下来会在大纲视图中对当前的元素分类，并且会写出 filter 来筛选数据，因为这个编辑器中可能目前只需要展示 <code>highway=*</code> 和 public transport v2 的数据，所以接下来的编辑界面应该会清爽很多。</p>
+</body></html>
+    
+    </div>
     
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2024">2024</h4>
-            <div class="articles">
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-09-15T12:22:38.000Z" itemprop="datePublished">
-                        9月 15</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-4/2024-09-15/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#4</a></h6>
-                </div>
+            <a href="/zh-cn/weekly-post-busfensi-4/2024-09-15/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#4</a>
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-09-02T08:37:32.000Z" itemprop="datePublished">
-                        9月 2</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-3/2024-09-02/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3</a></h6>
-                </div>
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-08-05T07:39:19.000Z" itemprop="datePublished">
-                        8月 5</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a></h6>
-                </div>
+            <a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a>
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-07-18T01:25:21.000Z" itemprop="datePublished">
-                        7月 18</time>
-                    <h6 class="title is-6"><a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1</a></h6>
-                </div>
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2024-07-16T13:04:54.000Z" itemprop="datePublished">
-                        7月 16</time>
-                    <h6 class="title is-6"><a href="/zh-cn/opening-of-busfensi-osm/2024-07-16/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting</a></h6>
-                </div>
-            
-            </div>
-        </div>
+        </span>
+    </div>
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2023">2023</h4>
-            <div class="articles">
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2023-01-25T10:54:08.000Z" itemprop="datePublished">
-                        1月 25</time>
-                    <h6 class="title is-6"><a href="/zh-cn/my-thought-of-witcher-3/2023-01-25/">我游玩《巫师 3》后的想法</a></h6>
-                </div>
-            
-            </div>
-        </div>
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">评论</h3>
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2022">2022</h4>
-            <div class="articles">
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2022-01-25T10:54:00.000Z" itemprop="datePublished">
-                        1月 25</time>
-                    <h6 class="title is-6"><a href="/zh-cn/hello-world/2022-01-25/">Hello World</a></h6>
-                </div>
-            
-            </div>
-        </div>
-    
-    
+        <script src="https://giscus.app/client.js"
+        data-repo="fltb/blog-comments"
+        data-repo-id="R_kgDOJIHa8Q"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOJIHa8c4CUzCw"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+        
+</div>
+
     </div>
 </section>
             <footer class="footer">
@@ -247,11 +262,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/archives/index.html" class="dropdown-item">
+                <a href="/weekly-post-busfensi-3/2024-09-02/" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/zh-cn/archives/index.html" class="dropdown-item">
+                <a href="/zh-cn/weekly-post-busfensi-3/2024-09-02/" class="dropdown-item">
                     简体中文
                 </a>
             
