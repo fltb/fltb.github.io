@@ -48,3 +48,10 @@ categories:
 ## 项目进度
 
 项目进度会在后续文章更新
+
+## 授权
+
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+CC0
+</a>.
