@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-<title>基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1 - FloatBlog</title>
+<title>基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting - FloatBlog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/weekly-post-busfensi-1/2024-07-18/" rel="alternate" hreflang="en" />
+<link href="/opening-of-busfensi-osm/2024-07-16/" rel="alternate" hreflang="en" />
     
 
 
@@ -21,20 +21,25 @@
 
 
 
-    <meta name="description" content="很快开发就经过了两个星期，是时候写一篇双周报了。 项目进度项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。 目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。 不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。 更新计划接下来的两个星">
+    <meta name="description" content="在这次 OSPP 当中我将会完成一个基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器。希望能为 OSM 社区做一些贡献。 项目目标本项目的目标是使用现代前端技术栈开发一个跨平台的编辑器，该编辑器操作简便，交互直观。项目过程中将与 OSM 中国社区合作，确保在交互设计和功能实现上达到较高的标准。 项目实现项目基本框架项目可以大致分为地图渲染模块，路线编辑模块，以及 OSM API">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1">
-<meta property="og:url" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/index.html">
+<meta property="og:title" content="基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting">
+<meta property="og:url" content="http://fltb.github.io/zh-cn/opening-of-busfensi-osm/2024-07-16/index.html">
 <meta property="og:site_name" content="FloatBlog">
-<meta property="og:description" content="很快开发就经过了两个星期，是时候写一篇双周报了。 项目进度项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。 目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。 不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。 更新计划接下来的两个星">
+<meta property="og:description" content="在这次 OSPP 当中我将会完成一个基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器。希望能为 OSM 社区做一些贡献。 项目目标本项目的目标是使用现代前端技术栈开发一个跨平台的编辑器，该编辑器操作简便，交互直观。项目过程中将与 OSM 中国社区合作，确保在交互设计和功能实现上达到较高的标准。 项目实现项目基本框架项目可以大致分为地图渲染模块，路线编辑模块，以及 OSM API">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png">
-<meta property="article:published_time" content="2024-07-18T01:25:21.000Z">
+<meta property="article:published_time" content="2024-07-16T13:04:54.000Z">
 <meta property="article:modified_time" content="2024-09-02T08:36:45.613Z">
 <meta property="article:author" content="fltb,Blog,Github Pages,Technology,Game,Literature,Socialism">
-<meta property="article:tag" content="fltb">
+<meta property="article:tag" content="开发">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="WebGL">
+<meta property="article:tag" content="地图">
+<meta property="article:tag" content="Openstreep Map">
+<meta property="article:tag" content="OSM">
+<meta property="article:tag" content="公交">
+<meta property="article:tag" content="OSPP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png">
 
 
 
@@ -134,36 +139,62 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1
+            基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
             
-                <time datetime="2024-07-18T01:25:21.000Z" itemprop="datePublished">7月 18 2024</time>
+                <time datetime="2024-07-16T13:04:54.000Z" itemprop="datePublished">7月 16 2024</time>
             
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/zh-cn/categories/%E5%89%8D%E7%AB%AF/">前端</a>
         </span>
         
         
         <span class="column is-narrow">
             
             
-            3 分钟 读完 (约 514 字)
+            4 分钟 读完 (约 642 字)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><p>很快开发就经过了两个星期，是时候写一篇双周报了。</p>
-<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。</p>
-<p>目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。</p>
-<p>不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。</p>
-<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>接下来的两个星期将会进行编辑模块的开发，写出一个功能良好的原型进行打磨，在稳定之后就可以和符合 OSM 标准的 API 进行通信并提交结果了。希望不会因为写出恶性 bug 被拉黑，😂。</p>
-<p>现在正在编写状态管理模块，希望能够为编辑提供稳定的支持。</p>
-<h2 id="演示效果"><a href="#演示效果" class="headerlink" title="演示效果"></a>演示效果</h2><p>目前我们的代码还不能进行任何编辑操作，也无法直接渲染从 OSM 网站获取的 XML 或 JSON, 因此我手动构造了几个点作为非常简陋的渲染测试。同时也测试了背景瓷砖的功能，目前运行良好。</p>
-<p>请原谅糟糕的配色，我会在后期进行打磨的。因为选取的经纬度刚好没有道路（这一点也不奇怪，地球上 71% 的地方都是海洋，陆地上大部分也是无人区，而我不幸随便打了个经纬度），OSM 的瓦片没有任何可辨识的内容，但是确实可以正常请求瓦片并渲染，可以看见开发者工具中的图片请求。</p>
-<p><img src="/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png" alt="img"></p>
+        <html><head></head><body><p>在这次 OSPP 当中我将会完成一个基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器。希望能为 OSM 社区做一些贡献。</p>
+<h2 id="项目目标"><a href="#项目目标" class="headerlink" title="项目目标"></a>项目目标</h2><p>本项目的目标是使用现代前端技术栈开发一个跨平台的编辑器，该编辑器操作简便，交互直观。项目过程中将与 OSM 中国社区合作，确保在交互设计和功能实现上达到较高的标准。</p>
+<h2 id="项目实现"><a href="#项目实现" class="headerlink" title="项目实现"></a>项目实现</h2><h3 id="项目基本框架"><a href="#项目基本框架" class="headerlink" title="项目基本框架"></a>项目基本框架</h3><p>项目可以大致分为地图渲染模块，路线编辑模块，以及 OSM API 模块</p>
+<h3 id="地图渲染"><a href="#地图渲染" class="headerlink" title="地图渲染"></a>地图渲染</h3><p>根据当前经纬度位置和需要的渲染范围，利用 OSM API 模块提供的抽象，向 OSM 主站请求地图数据，并根据所得的地图，通过渲染模块提供的 Feature 抽象，将元数据数据解析成点，线或多边形的图形对象（如 PIXI.Graphics 或 PIXI.Sprite ），通过 Pixi.js 使用 WebGL 渲染。</p>
+<p>同时，需要通过用户的交互来更新地图。通过监听用户鼠标和键盘事件，移动时动态地向服务器请求数据并更新，在放大缩小时控制地图的渲染粒度。当用户选择某些元素时，对元素进行高亮。这部分逻辑需要和路线编辑模块相互结合。</p>
+<h3 id="路线编辑"><a href="#路线编辑" class="headerlink" title="路线编辑"></a>路线编辑</h3><p>支持多选地图中的路线结点和站点，支持点选，框选，刷选等方式进行元素选择。通过简洁的 UI 进行线路的新建和编辑操作。页面需要足够清晰，提供直观的工具，方便用户快速找到需要的功能。</p>
+<p>通过调用其他开源路由 API （如 GraphHopper, OSRM, OpenTripPlanner 等）支持仅通过公交站点数据自动计算可能路径。</p>
+<p>通过引入状态管理机制，支持操作历史可持久化，可以满足撤回重做等基本操作需求。同时可以引入版本控制的有关思想，确保历史记录的高效性和稳定性。</p>
+<h3 id="OSM-API-模块"><a href="#OSM-API-模块" class="headerlink" title="OSM API 模块"></a>OSM API 模块</h3><p>提供与 OSM API v0.6 的交互的抽象，包括登录鉴权，数据请求，编辑数据后的数据上传，并且遵循 OSM 接口的规范。</p>
+<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>项目进度会在后续文章更新</p>
 </body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/%E5%BC%80%E5%8F%91/">#开发</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/%E5%89%8D%E7%AB%AF/">#前端</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/WebGL/">#WebGL</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/%E5%9C%B0%E5%9B%BE/">#地图</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/Openstreep-Map/">#Openstreep Map</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/OSM/">#OSM</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/%E5%85%AC%E4%BA%A4/">#公交</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/zh-cn/tags/OSPP/">#OSPP</a></span>
     
     </div>
     
@@ -171,12 +202,12 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a>
+            <a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/zh-cn/opening-of-busfensi-osm/2024-07-16/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting</a>
+            <a href="/zh-cn/my-thought-of-witcher-3/2023-01-25/">我游玩《巫师 3》后的想法</a>
             
         </span>
     </div>
@@ -261,11 +292,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/weekly-post-busfensi-1/2024-07-18/" class="dropdown-item">
+                <a href="/opening-of-busfensi-osm/2024-07-16/" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/" class="dropdown-item">
+                <a href="/zh-cn/opening-of-busfensi-osm/2024-07-16/" class="dropdown-item">
                     简体中文
                 </a>
             

@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-<title>基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1 - FloatBlog</title>
+<title>基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2 - FloatBlog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/weekly-post-busfensi-1/2024-07-18/" rel="alternate" hreflang="en" />
+<link href="/weekly-post-busfensi-2/2024-08-05/" rel="alternate" hreflang="en" />
     
 
 
@@ -21,20 +21,20 @@
 
 
 
-    <meta name="description" content="很快开发就经过了两个星期，是时候写一篇双周报了。 项目进度项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。 目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。 不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。 更新计划接下来的两个星">
+    <meta name="description" content="距离上一个周报已经过去两个多星期了，我也应该要同步当前的进度了。 项目进度目前项目的核心模块已经基本固定下来，可以进入后半阶段的开发，接下来的工作基本上是在现有框架内添加新的功能。 首先是调通了渲染部分，不过还是有些细节缺少打磨，比如样式以及控制渲染的元素，这些会和之后的功能同步进行，确保样式和编辑逻辑贴和。 其次我写了个 OSM API 模块，用 Promise 打包了一些 OSM 的接口，将返">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1">
-<meta property="og:url" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/index.html">
+<meta property="og:title" content="基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2">
+<meta property="og:url" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-2/2024-08-05/index.html">
 <meta property="og:site_name" content="FloatBlog">
-<meta property="og:description" content="很快开发就经过了两个星期，是时候写一篇双周报了。 项目进度项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。 目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。 不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。 更新计划接下来的两个星">
+<meta property="og:description" content="距离上一个周报已经过去两个多星期了，我也应该要同步当前的进度了。 项目进度目前项目的核心模块已经基本固定下来，可以进入后半阶段的开发，接下来的工作基本上是在现有框架内添加新的功能。 首先是调通了渲染部分，不过还是有些细节缺少打磨，比如样式以及控制渲染的元素，这些会和之后的功能同步进行，确保样式和编辑逻辑贴和。 其次我写了个 OSM API 模块，用 Promise 打包了一些 OSM 的接口，将返">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png">
-<meta property="article:published_time" content="2024-07-18T01:25:21.000Z">
+<meta property="og:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-2/2024-08-05/image.png">
+<meta property="article:published_time" content="2024-08-05T07:39:19.000Z">
 <meta property="article:modified_time" content="2024-09-02T08:36:45.613Z">
 <meta property="article:author" content="fltb,Blog,Github Pages,Technology,Game,Literature,Socialism">
 <meta property="article:tag" content="fltb">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png">
+<meta name="twitter:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-2/2024-08-05/image.png">
 
 
 
@@ -134,13 +134,13 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1
+            基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
             
-                <time datetime="2024-07-18T01:25:21.000Z" itemprop="datePublished">7月 18 2024</time>
+                <time datetime="2024-08-05T07:39:19.000Z" itemprop="datePublished">8月 5 2024</time>
             
         </span>
         
@@ -148,21 +148,37 @@
         <span class="column is-narrow">
             
             
-            3 分钟 读完 (约 514 字)
+            9 分钟 读完 (约 1339 字)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><p>很快开发就经过了两个星期，是时候写一篇双周报了。</p>
-<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。</p>
-<p>目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。</p>
-<p>不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。</p>
-<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>接下来的两个星期将会进行编辑模块的开发，写出一个功能良好的原型进行打磨，在稳定之后就可以和符合 OSM 标准的 API 进行通信并提交结果了。希望不会因为写出恶性 bug 被拉黑，😂。</p>
-<p>现在正在编写状态管理模块，希望能够为编辑提供稳定的支持。</p>
-<h2 id="演示效果"><a href="#演示效果" class="headerlink" title="演示效果"></a>演示效果</h2><p>目前我们的代码还不能进行任何编辑操作，也无法直接渲染从 OSM 网站获取的 XML 或 JSON, 因此我手动构造了几个点作为非常简陋的渲染测试。同时也测试了背景瓷砖的功能，目前运行良好。</p>
-<p>请原谅糟糕的配色，我会在后期进行打磨的。因为选取的经纬度刚好没有道路（这一点也不奇怪，地球上 71% 的地方都是海洋，陆地上大部分也是无人区，而我不幸随便打了个经纬度），OSM 的瓦片没有任何可辨识的内容，但是确实可以正常请求瓦片并渲染，可以看见开发者工具中的图片请求。</p>
-<p><img src="/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png" alt="img"></p>
+        <html><head></head><body><p>距离上一个周报已经过去两个多星期了，我也应该要同步当前的进度了。</p>
+<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>目前项目的核心模块已经基本固定下来，可以进入后半阶段的开发，接下来的工作基本上是在现有框架内添加新的功能。</p>
+<p>首先是调通了渲染部分，不过还是有些细节缺少打磨，比如样式以及控制渲染的元素，这些会和之后的功能同步进行，确保样式和编辑逻辑贴和。</p>
+<p>其次我写了个 OSM API 模块，用 Promise 打包了一些 OSM 的接口，将返回的 XML 解析成 JS Object , 方便在程序中调用。</p>
+<p>接下来是编辑模块。主要包括操作逻辑部分和全局数据管理部分</p>
+<p>对于地图编辑中的操作逻辑，引入了状态机，在代码中称为 state machine，管理当前的编辑器状态，通过监听鼠标和键盘事件，再根据状态图中提供的函数和状态关系，进行状态转移和相关数据维护。根据当前状态判断事件应当触发的行为和新状态。state machine 提供了一些 hook, 用于在其他地方挂载，追踪事件，比如 pixi 中的鼠标事件。编辑操作就在状态转移的时候进行。</p>
+<p>一般来说，在状态机本身转移的过程中会产生一系列对全局数据的变更。为了维护这些变更，提供了一个双向链表来进行管理这些变更，在代码中称为 action list。这个链表对外提供 undo, redo 和 do 接口。其中 do 接口接受一个 action 并且执行它，再将其加入链表尾部。为了避免多个重复 action，还会对有些 action 进行 merge 操作。</p>
+<p>一个 action 提供 do, undo, redo 接口，有些还会提供 merge。action 应当在被执行，撤销，重做时对全局数据进行维护，同时还要维护其他相关变更，比如被影响的元素的 UI,各个图层的数据等等。这样确保所有的变更集中到一起，尽可能减少引入撤销重做时对于相关变更维护的心智富而俺。</p>
+<p>全局数据是一个对象，它的引用存在每个 action 中，由 action list 保证每个 action 在撤销和重做时的顺序是正确的，比如确保撤销 action 时一定是该 action 被执行之后的状态，即后续 action 都已经被撤销。</p>
+<p>由于目前实际的编辑操作尚未完成，暂时不考虑 undo 和 redo 操作，因为他们会依赖未完成的部分代码。</p>
+<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>目前项目已经开发了一个月了，考虑到九月底就要结项，时间还是比较紧的。所以我会尽量优先完成核心功能，将一些非核心的外围功能排在后面完成，确保顺利结项（OSPP 的一万二不能丢啊，好多钱呢，剩下功能大不了国庆继续开发）。</p>
+<p>以下是大致需要的功能：</p>
+<h3 id="UI-方面"><a href="#UI-方面" class="headerlink" title="UI 方面"></a>UI 方面</h3><p>大纲(Outline)视图：可以显示当前所有元素，可以在这里选择元素，管理元素的基础状态</p>
+<p>属性(Property)视图：管理各种属性，包括全局设置属性，当前选中元素元信息等。</p>
+<p>还有一些独立的小组件，比如新建结点，连接线段等等</p>
+<h3 id="功能方面"><a href="#功能方面" class="headerlink" title="功能方面"></a>功能方面</h3><p>作为公共交通编辑器，就应该有公共交通编辑功能。在 OSM XML 中，公共交通关系是一个 relation 元素，这个 relation 拥有一个 route, 以及一系列 tag 表示该元素的具体信息。</p>
+<p>对于元信息的编辑，可以使用前面提到的属性视图来直接编辑。</p>
+<p>对于具体的点的位置，使用地图模块完成编辑。可以考虑添加一定的 style 来实现高亮方便明确当前编辑的路线。</p>
+<p>对于路线对于点和路径的包含关系，需要将地图的选择功能和属性视图结合。</p>
+<p>可能还需要一定的线路新建功能，包括新建点，新建线路，对线路属性再进行编辑。</p>
+<p>完成根据站点关系的线路计算功能，可以考虑调用现有 API 来实现</p>
+<h2 id="演示效果"><a href="#演示效果" class="headerlink" title="演示效果"></a>演示效果</h2><p>原谅我没有时间来打磨，现在他们全部共享一个 style 确实很难看。</p>
+<p>不过再加几行代码就可以吧建筑物的渲染取消掉，那样就会好很多。之后会慢慢调整style 的，也许从 iD 编辑器那边把颜色吸过来？😂</p>
+<p>关于编辑功能就不演示了，反正只有拖动点和拖动地图以及调整缩放比例。</p>
+<p><img src="/zh-cn/weekly-post-busfensi-2/2024-08-05/image.png" alt="img"></p>
 </body></html>
     
     </div>
@@ -171,12 +187,12 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a>
+            <a href="/zh-cn/weekly-post-busfensi-3/2024-09-02/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/zh-cn/opening-of-busfensi-osm/2024-07-16/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting</a>
+            <a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1</a>
             
         </span>
     </div>
@@ -261,11 +277,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/weekly-post-busfensi-1/2024-07-18/" class="dropdown-item">
+                <a href="/weekly-post-busfensi-2/2024-08-05/" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/" class="dropdown-item">
+                <a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/" class="dropdown-item">
                     简体中文
                 </a>
             

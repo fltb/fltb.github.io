@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-<title>基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1 - FloatBlog</title>
+<title>Archives: 2024/9 - FloatBlog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/weekly-post-busfensi-1/2024-07-18/" rel="alternate" hreflang="en" />
+<link href="/zh-cn/archives/2024/09/index.html" rel="alternate" hreflang="zh-CN" />
     
 
 
@@ -21,20 +21,16 @@
 
 
 
-    <meta name="description" content="很快开发就经过了两个星期，是时候写一篇双周报了。 项目进度项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。 目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。 不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。 更新计划接下来的两个星">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1">
-<meta property="og:url" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/index.html">
+    <meta name="description" content="A blog site of fltb, Technology, Game, Literature, Socialism">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FloatBlog">
+<meta property="og:url" content="http://fltb.github.io/archives/2024/09/index.html">
 <meta property="og:site_name" content="FloatBlog">
-<meta property="og:description" content="很快开发就经过了两个星期，是时候写一篇双周报了。 项目进度项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。 目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。 不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。 更新计划接下来的两个星">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png">
-<meta property="article:published_time" content="2024-07-18T01:25:21.000Z">
-<meta property="article:modified_time" content="2024-09-02T08:36:45.613Z">
+<meta property="og:description" content="A blog site of fltb, Technology, Game, Literature, Socialism">
+<meta property="og:locale" content="en_US">
 <meta property="article:author" content="fltb,Blog,Github Pages,Technology,Game,Literature,Socialism">
 <meta property="article:tag" content="fltb">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://fltb.github.io/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png">
 
 
 
@@ -82,7 +78,7 @@
 <nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/zh-cn">
+            <a class="navbar-item navbar-logo" href="/">
                 
                 <img src="/images/logo.png" alt="" height="28">
                 
@@ -97,22 +93,22 @@
         <div class="navbar-menu navbar-start">
             
             <a class="navbar-item "
-               href="/zh-cn/archives">归档</a>
+               href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/zh-cn/categories">分类</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/zh-cn/tags">标签</a>
+               href="/tags">Tags</a>
             
             <a class="navbar-item "
-               href="/zh-cn/about">关于</a>
+               href="/about">About</a>
             
         </div>
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="搜索" href="javascript:;">
+            <a class="navbar-item search" title="Search" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -131,82 +127,22 @@
 
         <section class="section">
     <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#1
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2024-07-18T01:25:21.000Z" itemprop="datePublished">7月 18 2024</time>
-            
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            3 分钟 读完 (约 514 字)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p>很快开发就经过了两个星期，是时候写一篇双周报了。</p>
-<h2 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h2><p>项目还在早期开发阶段，目前还没有可用的原型，不过已经可以渲染一些测试数据了。</p>
-<p>目前基本上确定了渲染部分的实现，经过测试可以渲染点和路径。</p>
-<p>不过由于其他模块的接口还没有完全确定，有部分功能没有实现。比如分线段高亮路径，而不是 iD 编辑器中默认选中整条路径的逻辑。还有多面体的渲染目前也没有实现，因为需要编辑模块的接口。</p>
-<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p>接下来的两个星期将会进行编辑模块的开发，写出一个功能良好的原型进行打磨，在稳定之后就可以和符合 OSM 标准的 API 进行通信并提交结果了。希望不会因为写出恶性 bug 被拉黑，😂。</p>
-<p>现在正在编写状态管理模块，希望能够为编辑提供稳定的支持。</p>
-<h2 id="演示效果"><a href="#演示效果" class="headerlink" title="演示效果"></a>演示效果</h2><p>目前我们的代码还不能进行任何编辑操作，也无法直接渲染从 OSM 网站获取的 XML 或 JSON, 因此我手动构造了几个点作为非常简陋的渲染测试。同时也测试了背景瓷砖的功能，目前运行良好。</p>
-<p>请原谅糟糕的配色，我会在后期进行打磨的。因为选取的经纬度刚好没有道路（这一点也不奇怪，地球上 71% 的地方都是海洋，陆地上大部分也是无人区，而我不幸随便打了个经纬度），OSM 的瓦片没有任何可辨识的内容，但是确实可以正常请求瓦片并渲染，可以看见开发者工具中的图片请求。</p>
-<p><img src="/zh-cn/weekly-post-busfensi-1/2024-07-18/screenshot.png" alt="img"></p>
-</body></html>
-    
-    </div>
     
     
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+        <div class="archive content">
+            <h4 class="title is-4" id="2024">2024</h4>
+            <div class="articles">
             
-            <a href="/zh-cn/weekly-post-busfensi-2/2024-08-05/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#2</a>
+                <div class="article content>">
+                    <time class="is-text-small" datetime="2024-09-02T08:37:32.000Z" itemprop="datePublished">
+                        Sep 2</time>
+                    <h6 class="title is-6"><a href="/weekly-post-busfensi-3/2024-09-02/">weekly-post-busfensi-3</a></h6>
+                </div>
             
-        </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/zh-cn/opening-of-busfensi-osm/2024-07-16/">基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— Starting</a>
-            
-        </span>
-    </div>
+            </div>
+        </div>
     
-</article>
-
-
-
-
-<div class="comments">
-    <h3 class="title is-4">评论</h3>
     
-        <script src="https://giscus.app/client.js"
-        data-repo="fltb/blog-comments"
-        data-repo-id="R_kgDOJIHa8Q"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOJIHa8c4CUzCw"
-        data-mapping="pathname"
-        data-strict="1"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-        
-</div>
-
     </div>
 </section>
             <footer class="footer">
@@ -252,7 +188,7 @@
                 <span class="icon">
                     <i class="fas fa-globe"></i>
                 </span>
-                <span>简体中文</span>
+                <span>English</span>
                 <span class="icon is-small">
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </span>
@@ -261,11 +197,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/weekly-post-busfensi-1/2024-07-18/" class="dropdown-item">
+                <a href="/archives/2024/09/index.html" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/zh-cn/weekly-post-busfensi-1/2024-07-18/" class="dropdown-item">
+                <a href="/zh-cn/archives/2024/09/index.html" class="dropdown-item">
                     简体中文
                 </a>
             
@@ -302,7 +238,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("zh-CN");
+    moment.locale("en-AU");
 </script>
 
 
@@ -428,7 +364,7 @@
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -440,13 +376,13 @@
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: '文章',
-                PAGES: '页面',
-                CATEGORIES: '分类',
-                TAGS: '标签',
-                UNTITLED: '(无标题)',
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
             },
-            CONTENT_URL: '/content.zh-cn.json',
+            CONTENT_URL: '/content.json',
         };
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
