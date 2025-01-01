@@ -100,11 +100,3 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: minos-my
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo:
-    # Either syntax is supported
-    github: https://github.com/fltb/fltb.github.io.git,gh-pages
