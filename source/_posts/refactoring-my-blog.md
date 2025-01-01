@@ -1,7 +1,7 @@
 ---
-- title: Blog Refactoring Notes  
-- date: 2025-01-01 16:23:54  
-- tags:  
+title: Blog Refactoring Notes  
+date: 2025-01-01 16:23:54  
+tags:  
 - Frontend  
 - Blog  
 - Hexo  
@@ -10,7 +10,7 @@
 - EJS  
 - Template  
 - Refactoring  
-- categories:
+categories:
 - Frontend  
 ---
 
