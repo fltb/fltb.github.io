@@ -70,3 +70,14 @@ navbar_links:
   GitHub:
     icon: fab fa-github
     url: https://github.com/fltb/
+
+footer:
+  enable_busuanzi: true
+  enable_cc_license: true  # Toggle for CC license information
+  license:
+    name: "CC BY-NC-SA 4.0"  # License name to display
+    url: "http://creativecommons.org/licenses/by-nc-sa/4.0/"  # Link to the license
+
+float-monkey-patch-style:
+  enable: true
+  background-color: "#ebe7dc"
