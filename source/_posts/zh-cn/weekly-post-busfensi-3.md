@@ -2,6 +2,17 @@
 title: 基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器 —— 周报#3
 date: 2024-09-02 16:37:32
 tags:
+- 前端
+- WebGL
+- 地图
+- 开发
+- Openstreep Map
+- OSM
+- 公交
+- OSPP
+
+categories:
+- 前端
 ---
 
 很遗憾这个周报欠了两个星期，所以这次会连着发两份周报（下一份也在写了）。
