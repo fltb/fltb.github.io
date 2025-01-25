@@ -12,7 +12,7 @@ tags:
 - OSPP
 
 categories:
-- 前端
+- BusFensi
 ---
 
 在这次 OSPP 当中我将会完成一个基于现代前端技术栈的 OpenStreeMap 公共交通关系编辑器。希望能为 OSM 社区做一些贡献。

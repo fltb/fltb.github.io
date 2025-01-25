@@ -12,7 +12,7 @@ tags:
 - OSPP
 
 categories:
-- 前端
+- BusFensi
 ---
 
 很快开发就经过了两个星期，是时候写一篇双周报了。
